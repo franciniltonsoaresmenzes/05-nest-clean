@@ -1,4 +1,6 @@
 @baseUrl =  http://localhost:3333
+@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE2OTU4NjA3OTZ9.kxYFpEV8zGO5bB0ruwhVyIwH8SZ1SYQ1HRr1jtgT5jkaUdC6GXRiSB746A9LOKFQTpndk-ZW28tevaw5J20YH-kv00WNFi2Dr6GUlF5S36p1mXkZqfr8fFE5b_UsM5DSmNXsD_iKJXbNU-FKKfwvWMKSZmaRnTv1k4QM8LkSM-CGtaf47018eATt3YPL6v_2D7t-5bXw3jvPtu3T8uBn5aNQtvRwTdilCVHNhbCYWWNX9a9X4xnlPWX1_30_5_6eRKjnkYyU9UV-GI6xIw26dah-zU87YsvmFTHGNqCY8f1V3GloBUlNKT0aSPh6In-or_57yzyReYk6hXTh39EaTA
+# @authToken = {{authenticate.response.body.access_token}}
 
 # @name create_account
 POST {{baseUrl}}/accounts
@@ -20,5 +22,12 @@ Content-Type: application/json
   "email": "francinilton@gmail.com",
   "password": "123456"
 }
+
+###
+
+# @name create_question
+POST {{baseUrl}}/questions
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
 
 ###

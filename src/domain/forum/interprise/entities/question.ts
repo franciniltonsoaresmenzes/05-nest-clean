@@ -9,7 +9,7 @@ import { QuestionBestAnswerChosenEvent } from '../events/question-best-answer-ch
 
 export interface QuestionProps {
   authorId: UniqueEntityID
-  bestAnwserId?: UniqueEntityID
+  bestAnwserId?: UniqueEntityID | null
   title: string
   content: string
   slug: Slug
@@ -27,7 +27,7 @@ export class Question extends AggregateRoot<QuestionProps> {
     return this.props.bestAnwserId
   }
 
-  set bestAnwserId(bestAnwserId: UniqueEntityID | undefined) {
+  set bestAnwserId(bestAnwserId: UniqueEntityID | undefined | null) {
     if (bestAnwserId && bestAnwserId !== this.props.bestAnwserId) {
       this.addDomainEvent(new QuestionBestAnswerChosenEvent(this, bestAnwserId))
     }

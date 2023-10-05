@@ -2,7 +2,6 @@ import { AggregateRoot } from '@/core/entities/aggregate-root'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { Optional } from '@/core/types/optional'
 import dayjs from 'dayjs'
-import { title } from 'process'
 import { QuestionAttachmentList } from './question-attatchment-list'
 import { Slug } from './value-objects/slug'
 import { QuestionBestAnswerChosenEvent } from '../events/question-best-answer-chosen-event'
@@ -93,7 +92,7 @@ export class Question extends AggregateRoot<QuestionProps> {
     const question = new Question(
       {
         ...props,
-        slug: props.slug ?? Slug.createFromText(title),
+        slug: props.slug ?? Slug.createFromText(props.title),
         attachments: props.attachments ?? new QuestionAttachmentList(),
         createdAd: props.createdAd ?? new Date(),
       },

@@ -1,5 +1,6 @@
 import { StudentAlreadyExistError } from '@/domain/forum/application/use-cases/errors/student-already-exits-error'
 import { RegisterStudentUseCase } from '@/domain/forum/application/use-cases/register-student'
+import { Public } from '@/infra/auth/public'
 import { ZodValidationPipe } from '@/infra/http/pipes/zod-validation-pipe'
 import {
   BadRequestException,
@@ -20,6 +21,7 @@ const createAccountSchema = z.object({
 type createAccountBody = z.infer<typeof createAccountSchema>
 
 @Controller('/accounts')
+@Public()
 export class CreateAccountController {
   constructor(private registerStudent: RegisterStudentUseCase) {}
 

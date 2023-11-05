@@ -1,5 +1,5 @@
 @baseUrl =  http://localhost:3333
-@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE2OTkxMzgzMzB9.q7_K0-pytBvl2n2ZtMdyovMs3WPZhEGoEbU8HZ4HOYWlu4QtWqR4iLULuYoyI6vz1NvTNAHPnQJAQ1Ld4c0bOnVHlpWKygZWfc4IpfDamGOdWaiJbJ01TFwkO7_ixp6_N34fsTjekIi87oe0HUSEUSQx13cyR3Q8m48eVxNU5XeXkSE5MzYs7Xw5qtHta0qhXBSobnhFssWS4hvLcdjJLEeWskH-o9fqrBPFqGS5ii3tD9ZDJLKpNZM0L4cLWvIveYwGObkfvvhO7_JIMoUNXPCEpUyNIraxglGkBkQvEQgkYJFEbuu0UR2u6q8ah9qL2RmdpNDC-yjurSZG1Wmjzg
+@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE2OTkyMTU4NTh9.Y57fRbOz5TWNEgq-4rVbyiJwAo_8H0xyNAj028FxeciVrBerfynGUpd-V82PbghVSc3VZE3SmZUH2K9ryuC8la5SyMLm76UDAbVKchnaQBzS2x0iRhyULl9AET_WZSMUz4kR-x4uV5N833WqBFape3Mq_uD1VyKjx4D3C2StkLIWUxCnQQpvv21kphPusYErgzNdAf6Mq3-fOds24CnPNWdtXQvedvNfVuQT-KXPKfE0lMnKb_PiUjJ9rOQuFoXdJ4NqSCiRMYii6bGc_JsdCikiBNjhaBmnALWloBvDAFKWdJI239mubo7eAFY0rUkCidiW-IZIPZxobzTDZARVHg
 # @authToken = {{authenticate.response.body.access_token}}
 
 # @name create_account
@@ -7,8 +7,8 @@ POST {{baseUrl}}/accounts
 Content-Type: application/json
 
 {
-  "name": "Jhon Doen",
-  "email": "johndoe@gmail.com",
+  "name": "Jhon Doen da Silva",
+  "email": "johndoe2@gmail.com",
   "password": "123456"
 }
 
@@ -19,7 +19,7 @@ POST {{baseUrl}}/sessions
 Content-Type: application/json
 
 {
-  "email": "francinilto@gmail.com",
+  "email": "francinilton@gmail.com",
   "password": "123456"
 }
 
@@ -31,7 +31,7 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "Nova pergunta 71",
+  "title": "Nova pergunta 73",
   "content": "Conteúdo da pergunta"
 }
 

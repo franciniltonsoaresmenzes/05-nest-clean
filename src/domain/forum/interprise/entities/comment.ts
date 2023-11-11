@@ -5,7 +5,7 @@ export interface CommentProps {
   authorId: UniqueEntityID
   content: string
   createdAd: Date
-  updatedAt?: Date
+  updatedAt?: Date | null
 }
 
 export abstract class Comment<

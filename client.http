@@ -1,5 +1,5 @@
 @baseUrl =  http://localhost:3333
-@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE2OTkyMTU4NTh9.Y57fRbOz5TWNEgq-4rVbyiJwAo_8H0xyNAj028FxeciVrBerfynGUpd-V82PbghVSc3VZE3SmZUH2K9ryuC8la5SyMLm76UDAbVKchnaQBzS2x0iRhyULl9AET_WZSMUz4kR-x4uV5N833WqBFape3Mq_uD1VyKjx4D3C2StkLIWUxCnQQpvv21kphPusYErgzNdAf6Mq3-fOds24CnPNWdtXQvedvNfVuQT-KXPKfE0lMnKb_PiUjJ9rOQuFoXdJ4NqSCiRMYii6bGc_JsdCikiBNjhaBmnALWloBvDAFKWdJI239mubo7eAFY0rUkCidiW-IZIPZxobzTDZARVHg
+@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE3MDA5NTAxNTN9.o_OnidNQpwa2rLuRJeY6ediWGv7WhzUE_8xS9qwmsv1Y7VSv3k-1W2QYgHkjwEWEPzM4mbnA8p71nbMJ1oQJASIZnY1bWL7T-0TdS_h1EIADqhdX33lGCVGyThVwkJwQGgdbNozNAJVEe-QzxB3HHsoPMCSwFG2-K5bJFjVdDffMk969rdR1i53ZK_MHUkFU7Ua6Gm1iKe9MSwL_gJipOsetsMOP6Iu1xpPIAbIlKU9r_mqJqU4QaPro5jMvDCu0L1AWcu5sRRk-PYbNQGpQXP2lSPZ4Gi5DwXYN5Fc6ZMqLyxnEdLkxGbHzk0m--B26KMT5Uge9WZGGWHw7s8pKeg
 # @authToken = {{authenticate.response.body.access_token}}
 
 # @name create_account
@@ -31,7 +31,7 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "Nova pergunta 74",
+  "title": "Nova pergunta 76",
   "content": "Conteúdo da pergunta"
 }
 

@@ -1,5 +1,5 @@
 @baseUrl =  http://localhost:3333
-@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE3MDA5NTAxNTN9.o_OnidNQpwa2rLuRJeY6ediWGv7WhzUE_8xS9qwmsv1Y7VSv3k-1W2QYgHkjwEWEPzM4mbnA8p71nbMJ1oQJASIZnY1bWL7T-0TdS_h1EIADqhdX33lGCVGyThVwkJwQGgdbNozNAJVEe-QzxB3HHsoPMCSwFG2-K5bJFjVdDffMk969rdR1i53ZK_MHUkFU7Ua6Gm1iKe9MSwL_gJipOsetsMOP6Iu1xpPIAbIlKU9r_mqJqU4QaPro5jMvDCu0L1AWcu5sRRk-PYbNQGpQXP2lSPZ4Gi5DwXYN5Fc6ZMqLyxnEdLkxGbHzk0m--B26KMT5Uge9WZGGWHw7s8pKeg
+@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE3MDExMjk1NTF9.huLfvJ6v2nHSvAqOocoKvvolCb-kSFVP3G0X0xPpdG7qQctEhgzGxB8TV4zUNM2lMGCAg60d2PrPC0oTuKVXsUl8thz-0gm79mOBk186K0nFPPgPOv603dwSvAB9j0r_i-LOs-E6JxomgH_huRdmFCbCNeOgidTnYI7J4jxTQ4Cqm3iHS11y1Wp88BZtiLN3TivENvp_YvsFHPB9xn11XEFRzqsyVVBAP8AOi9FMCBNrLyt8fMRt9uV5xnxtGtm5ZF7eCJuNFJ62DvoGKsKmYKtJ51QwSRuA4vslUXNlPHMOuRFYSJ-7FkTLXRXhNjnY9CU0iUfJWWJdoGDCEePdsQ
 # @authToken = {{authenticate.response.body.access_token}}
 
 # @name create_account
@@ -39,6 +39,13 @@ Authorization: Bearer {{authToken}}
 
 # @name fetch_recents_questions
 GET {{baseUrl}}/questions?page=1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name delete_question
+DELETE {{baseUrl}}/questions/f52ea856-93e0-41c5-bd3c-1fbc5a6444ed
 Content-Type: application/json
 Authorization: Bearer {{authToken}}
 

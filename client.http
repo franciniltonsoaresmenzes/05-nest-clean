@@ -50,3 +50,14 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 ###
+
+# @name answer_question
+POST {{baseUrl}}/questions/f52ea856-93e0-41c5-bd3c-1fbc5a6444ed/answer
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "content": "Answer Content"
+}
+
+###

@@ -11,10 +11,20 @@ export class PrismaAnswerAttachmentsRepository
   constructor(private prisma: PrismaService) {}
 
   async findManyByAnswerId(answerId: string): Promise<AnswerAttachments[]> {
-    throw new Error('')
+    const data = await this.prisma.attachment.findMany({
+      where: {
+        answerId,
+      },
+    })
+
+    return data.map(PrismaAnswerAttachmentMapper.toDomain)
   }
 
-  deleteManyByAnswerId(answerId: string): Promise<void> {
-    throw new Error('')
+  async deleteManyByAnswerId(answerId: string): Promise<void> {
+    await this.prisma.answer.delete({
+      where: {
+        id: answerId,
+      },
+    })
   }
 }

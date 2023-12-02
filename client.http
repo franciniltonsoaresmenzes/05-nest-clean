@@ -1,5 +1,5 @@
 @baseUrl =  http://localhost:3333
-@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE3MDExMjk1NTF9.huLfvJ6v2nHSvAqOocoKvvolCb-kSFVP3G0X0xPpdG7qQctEhgzGxB8TV4zUNM2lMGCAg60d2PrPC0oTuKVXsUl8thz-0gm79mOBk186K0nFPPgPOv603dwSvAB9j0r_i-LOs-E6JxomgH_huRdmFCbCNeOgidTnYI7J4jxTQ4Cqm3iHS11y1Wp88BZtiLN3TivENvp_YvsFHPB9xn11XEFRzqsyVVBAP8AOi9FMCBNrLyt8fMRt9uV5xnxtGtm5ZF7eCJuNFJ62DvoGKsKmYKtJ51QwSRuA4vslUXNlPHMOuRFYSJ-7FkTLXRXhNjnY9CU0iUfJWWJdoGDCEePdsQ
+@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MjE4OTc2MS1lYTQzLTQ3MTItOGZhNC03ZDczMGU4YTJmNTYiLCJpYXQiOjE3MDE0ODA4ODB9.RX28ICPB4FgtIu97ZG15HrP3Ud-dljhClAw5VSinBbaR4IGNI-LjUsvYcT93drCuaMWIi0EkH7oPM-ooX7zBNWQuvkoXzv38X8ZNMv3Yr93l3xPGboGDIY_BMjR30OFJC6dsyv_GUWe58_s9NBFHWIKm-wTQvpujqAmukDRPg3GrRogq2GQjXyib_FB5QhiW1ZVKbrgBtmj5T10P5bQWYdCLfC0WZy7WnFW_1KrZfvAQ5YZv_uvMOq7vkpR2k76giXNK91v_Go9okGJWeUNEaSKlOMPZqeVl2uEuZATdb0ht_FA_cEhbNxTOUUpNshcJjVO2IUWNyyNM-MJ6HEA-1Q
 # @authToken = {{authenticate.response.body.access_token}}
 
 # @name create_account
@@ -58,6 +58,17 @@ Authorization: Bearer {{authToken}}
 
 {
   "content": "Answer Content"
+}
+
+###
+
+# @name answer_edit
+PUT {{baseUrl}}/answers/f2e4da79-6a33-49c8-91ba-d7e0d0ef3259
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "content": "New Answer Content"
 }
 
 ###

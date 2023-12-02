@@ -7,6 +7,7 @@ import { AnswerAttachmentsRepository } from '../repositories/answer-attachments-
 import { AnswerRepository } from '../repositories/answer-repository'
 import { NotAllowedError } from '../../../../core/erros/errors/not-allowed-error'
 import { ResourceNotFoundError } from '../../../../core/erros/errors/resource-not-found-error'
+import { Injectable } from '@nestjs/common'
 
 interface EditAnswerUseCaseResquest {
   authorId: string
@@ -22,6 +23,7 @@ type EditAnswerUseCaseResponse = Either<
   }
 >
 
+@Injectable()
 export class EditAnswerUseCase {
   constructor(
     private answersRepository: AnswerRepository,

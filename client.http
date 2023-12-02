@@ -72,3 +72,11 @@ Authorization: Bearer {{authToken}}
 }
 
 ###
+
+# @name fetch_answers_question
+GET {{baseUrl}}/queston/f52ea856-93e0-41c5-bd3c-1fbc5a6444ed/answers
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+
+###

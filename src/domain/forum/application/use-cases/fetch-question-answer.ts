@@ -1,6 +1,7 @@
 import { Either, right } from '@/core/either'
 import { Answer } from '../../interprise/entities/answer'
 import { AnswerRepository } from '../repositories/answer-repository'
+import { Injectable } from '@nestjs/common'
 
 interface FetchQuestionAnswersUseCaseResquest {
   page: number
@@ -14,6 +15,7 @@ type FetchQuestionAnswersUseCaseResponse = Either<
   }
 >
 
+@Injectable()
 export class FetchQuestionAnswersUseCase {
   constructor(private answerRepository: AnswerRepository) {}
 
